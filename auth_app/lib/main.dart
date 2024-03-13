@@ -3,9 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 import 'afganiMutton.dart';
 import 'createAccount.dart';
-/* import 'items.dart';
-import 'starter.dart';*/
 import 'dashboard_page.dart';
+import 'ForgotPass.dart';
 
 //import 'package:flutter/google_fonts/google_fonts.dart';
 import 'dart:convert';
@@ -134,7 +133,7 @@ class _LoginPageState extends State<LoginPage> {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) => AfganiMutton()));
+                                  builder: (context) => ForgotPasswordPage()));
                         },
                         child: Text(
                           'Forgot Password?',
@@ -142,18 +141,21 @@ class _LoginPageState extends State<LoginPage> {
                         ),
                       ),
                       TextButton(
-                        onPressed: () {
-                          // Implement create account functionality
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => SignUp()));
-                        },
-                        child: Text(
-                          'Create new Account',
-                          style: TextStyle(color: Colors.white),
-                        ),
-                      ),
+  onPressed: () {
+    // Implement create account functionality
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => SignUpPage(), // Corrected: Use SignUpPage
+      ),
+    );
+  },
+  child: Text(
+    'Create new Account',
+    style: TextStyle(color: Colors.white),
+  ),
+),
+
                     ],
                   ),
                 ),
